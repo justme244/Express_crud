@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add product</h1>
+    <form action="/products" method="post">
+        <label for="name">name</label>
+        <input type="text" name="name" id="name">
+        <br>
+        <label for="brand">Brand</label>
+        <input type="text" name="brand" id="brand">
+        <br>
+        <label for="color">warna</label>
+        <input type="text" name="color" id="color">
+        <br>
+        <label for="price">Harga</label>
+        <input type="number" name="price" >
+        <br>
+        <label for="category">Kategori</label>
+        <select name="category" id="category">
+            <option value="">Pilih Kategori</option>
+            <option value="Baju">Baju</option>
+            <option value="Aksesoris">Aksesoris</option>
+            <option value="Jaket">Jaket</option>
+            <option value="Celana">Celana</option>
+        </select>
+        <br>
+        <button type="submit">SIMPAN</button>
+        <!-- 'Baju','Celana','Aksesoris','Jaket' -->
+    </form>
+</body>
+</html>

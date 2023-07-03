@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add product</h1>
+    <form action="/products/<%=products._id%>?_method=PUT" method="post" >
+        <label for="name">name</label>
+        <input type="text" name="name" id="name" value="<%= products.name%>">
+        <br>
+        <label for="brand">Brand</label>
+        <input type="text" name="brand" id="brand" value="<%= products.brand%>">
+        <br>
+        <label for="color">warna</label>
+        <input type="text" name="color" id="color" value="<%=products.color%>">
+        <br>
+        <label for="price">Harga</label>
+        <input type="number" name="price" value="<%= products.price%>" >
+        <br>
+        <label for="category">Kategori</label>
+        <select name="category" id="category">
+            <option value="" >Pilih Kategori</option>
+            <option value="Baju" <%=products.category =='Baju' ? 'selected' : '' %>>Baju</option>
+            <option value="Aksesoris" <%=products.category =='Aksesoris' ? 'selected' : '' %>>Aksesoris</option>
+            <option value="Jaket" <%=products.category =='Jaket' ? 'selected' : '' %>>Jaket</option>
+            <option value="Celana" <%=products.category =='Celana' ? 'selected' : '' %>>Celana</option>
+        </select>
+        <br>
+        <button type="submit">SIMPAN</button>
+        <!-- 'Baju','Celana','Aksesoris','Jaket' -->
+    </form>
+</body>
+</html>

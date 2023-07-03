@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1><%= products.name%></h1>
+     <p><%=products.brand%></p>
+     <p><%=products.price%></p>
+     <p>Kategori: <a href="/products?category=<%=products.category%>"><%=products.category%></a></p>
+
+     <a href="/products">All Products</a>
+    <a href="/products/<%=products._id%>/edit ">edit</a>
+<form action="/products/<%=products._id%>?_method=DELETE" method="post">
+<button type="submit">DELETE</button>
+</form>
+
+</body>
+</html>
